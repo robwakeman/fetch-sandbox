@@ -1,8 +1,10 @@
+// Add event listeners
 document.getElementById('getText').addEventListener('click', getText);
 document.getElementById('getUsers').addEventListener('click', getUsers);
 document.getElementById('getPosts').addEventListener('click', getPosts);
 document.getElementById('addPost').addEventListener('submit', addPost);
 
+// handle errors
 function handleErrors(res) {
   if (!res.ok) {
     throw Error(res.statusText);
@@ -10,7 +12,7 @@ function handleErrors(res) {
   return res;
 }
 
-//Get Text button
+// Get Text button
 function getText() {
   fetch('sample.txt')
     .then(handleErrors)
@@ -21,7 +23,7 @@ function getText() {
     .catch(err => console.log('Catch Error', err));
 }
 
-//Get JSON button
+// Get JSON button
 function getUsers() {
   fetch('users.json')
     .then(handleErrors)
@@ -42,7 +44,7 @@ function getUsers() {
     .catch(err => console.log('Catch Error', err));
 }
 
-//Get API DATA button
+// Get API DATA button
 function getPosts() {
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then(handleErrors)
@@ -62,7 +64,7 @@ function getPosts() {
     .catch(err => console.log('Catch Error', err));
 }
 
-//Form with Title and Body fields
+// Form with Title and Body fields
 function addPost(e) {
   e.preventDefault();
 
