@@ -10,16 +10,26 @@ Thanks to [Enoc](https://github.com/tenvega) for the [original code](https://git
 
 I have amended the original code as follows:
 
-- **HTML**
+**JavaScript**
 
-  - amended markup
+- moved js to external file
 
-- **CSS**
+- added [fetch](https://github.com/github/fetch) and [promise](https://github.com/taylorhakes/promise-polyfill) polyfills.
 
-  - added custom CSS
+- transpiled the promise polyfill using the [online Babel transpiler](https://babeljs.io/repl/)
 
-- **JavaScript**
+- added global exports variable to fetch.js to prevent console error: Uncaught ReferenceError: exports is not defined at fetch.js:3, as recommended [here](https://stackoverflow.com/questions/42497479/uncaught-referenceerror-exports-is-not-defined-in-filed-generated-by-typescript/43702240).
 
-  - moved js to external file
-  - added fetch and promise polyfills
-  - added error handling to fetch requests
+```javascript
+var exports = {};
+```
+
+- added error handling to fetch requests
+
+**HTML**
+
+- amended markup
+
+**CSS**
+
+- added custom CSS
