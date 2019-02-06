@@ -6,7 +6,7 @@ Fetch API sandbox to get data from local resources as well as a remote API.
 
 Thanks to [Enoc](https://github.com/tenvega) for the [original code](https://github.com/tenvega/Fetch-API-Sandbox-Practice).
 
-[Demo](http://dev.robwakeman.com/book-reading-list/)
+[Demo](http://dev.robwakeman.com/fetch-sandbox/)
 
 I have amended the original code as follows:
 
