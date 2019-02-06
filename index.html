@@ -10,18 +10,26 @@
       .btn {
         cursor: pointer;
       }
+      hr {
+        background-color: #aaa;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container mb-5">
       <h1 class="display-4 mb-4">Fetch API Sandbox</h1>
-      <div class="d-flex">
+      <div class="d-flex mb-4">
         <button class="btn btn-primary mr-4" id="getText">Get Text</button>
         <button class="btn btn-success mr-4" id="getUsers">Get JSON</button>
         <button class="btn btn-warning mr-4" id="getPosts">Get API DATA</button>
       </div>
       <hr />
-      <div id="output"></div>
+      <div id="output" class="mt-4 mb-4">
+        <p>Data will show here</p>
+      </div>
+      <hr class="mb-5" />
+
+      <h2 class="mb-4">Add Post</h2>
       <form id="addPost">
         <div class="form-group">
           <input type="text" id="title" class="form-control" placeholder="Title" />
@@ -29,7 +37,7 @@
         <div class="form-group">
           <textarea id="body" class="form-control" placeholder="Body"></textarea>
         </div>
-        <input type="submit" class="btn btn-secondary" value="Submit" />
+        <input type="submit" class="btn btn-secondary" value="Add post" />
       </form>
     </div>
 
