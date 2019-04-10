@@ -7,7 +7,7 @@ document.getElementById('addPost').addEventListener('submit', addPost);
 // handle errors
 function handleErrors(res) {
   if (!res.ok) {
-    throw Error(res.statusText);
+    throw new Error(res.statusText);
   }
   return res;
 }
