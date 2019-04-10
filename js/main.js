@@ -75,9 +75,9 @@ function addPost(e) {
     method: 'POST',
     headers: {
       Accept: 'application/json, text/plain, */*',
-      'Content-type': 'application/json'
+      'Content-type': 'application/json',
     },
-    body: JSON.stringify({ title: title, body: body })
+    body: JSON.stringify({ title: title, body: body }),
   })
     .then(handleErrors)
     .then(res => res.json())
